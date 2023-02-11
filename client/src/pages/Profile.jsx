@@ -121,7 +121,7 @@ export function Profile(props) {
                 }}
               />
               <div className="ms-2 me-auto">
-                <div className="fw-bold">{tenant?.list_as.name}</div>
+                <div className="fw-bold">{tenant?.listAs}</div>
                 Status
               </div>
             </ListGroup.Item>

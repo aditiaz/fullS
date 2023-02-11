@@ -63,19 +63,17 @@ export const DetailProperty = () => {
           </div>
         </Col>
         <Col>
-          <h1 className="fw-bold my-5" style={{ fontSize: "4.5rem" }}>
-            {property?.name}
-          </h1>
+          <h1 className=""> {property?.name_property}</h1>
           <div
             className="d-flex mt-3 justify-content-between"
             // style={{ backgroundColor: "salmon" }}
           >
             <div className="p-0 col-8">
               <p style={{ fontSize: "2rem", backgroundColor: "white" }}>
-                Rp.{property?.price} /{property?.type_rent}
+                Rp.{property?.price} / {property?.type_of_rent}
               </p>
               <p className="text-secondary" style={{ fontSize: "1rem", width: "20rem" }}>
-                {property?.address},{property?.city.name}
+                {property?.address},{property?.city}
               </p>
             </div>
             <div
@@ -112,7 +110,7 @@ export const DetailProperty = () => {
           </div>
           <h1 className="fw-bold">Description</h1>
           <p className="text-secondary ">{property?.description}</p>
-          {localStorage.userId == 2 ? (
+          {localStorage.Roles == "Tenant" ? (
             <>
               <div className="d-flex justify-content-end w-100 my-5">
                 <Button
